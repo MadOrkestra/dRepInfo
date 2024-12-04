@@ -7,24 +7,13 @@
     "body": {
       "@id": "CIP119:body",
       "@context": {
-        "bio": "CIP119:bio",
-        "email": "CIP119:email",
-        "givenName": "CIP119:givenName",
-        "motivations": "CIP119:motivations",
-        "objectives": "CIP119:objectives",
-        "paymentAddress": "CIP119:paymentAddress",
-        "qualifications": "CIP119:qualifications",
-        "image": {
-          "@id": "CIP119:image",
-          "@context": {
-            "ImageObject": "https://schema.org/ImageObject"
-          }
-        },
         "references": {
           "@id": "CIP119:references",
           "@container": "@set",
           "@context": {
             "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Identity": "CIP119:IdentityReference",
+            "Link": "CIP119:LinkReference",
             "Other": "CIP100:OtherReference",
             "label": "CIP100:reference-label",
             "uri": "CIP100:reference-uri",
@@ -36,7 +25,14 @@
               }
             }
           }
-        }
+        },
+        "paymentAddress": "CIP119:paymentAddress",
+        "givenName": "CIP119:givenName",
+        "image": "CIP119:image",
+        "objectives": "CIP119:objectives",
+        "motivations": "CIP119:motivations",
+        "qualifications": "CIP119:qualifications",
+        "doNotList": "CIP119:doNotList"
       }
     },
     "authors": {
@@ -55,38 +51,14 @@
       }
     }
   },
-  "authors": [
-    {
-      "witness": {
-        "publicKey": {
-          "@value": "a4010103272006215820959b5bad131c3048d42492f632b0ce5d76707805ff66d176f3ef1ceb8f6da528"
-        },
-        "signature": {
-          "@value": "84582aa201276761646472657373581d61098128b37ae30561dded2a9a5ef381006679579db7e202368d2f295ba166686173686564f45844566572696679204452657020647265703132706e6d71387370737334777970646861327a376875766d346c7a7167386771366566386665386a6c6e367079307032716a765840b6bc29b169c931ce62ac1eaeb3bdc6340a622762884c8ab3a494f4450a1754daab9a26115fc96fcd9527f80e6e6fa7e94ee1a6eb87b45d18a7412448b5841705"
-        },
-        "witnessAlgorithm": {
-          "@value": "Ed25519"
-        }
-      }
-    }
-  ],
+  "authors": [],
   "hashAlgorithm": {
     "@value": "blake2b-256"
   },
   "body": {
-    "bio": {
-      "@value": "I am here now, too. I build things."
-    },
-    "email": {
-      "@value": "mad@madorkestra.com"
-    },
+    "doNotList": false,
     "givenName": {
       "@value": "Mad Orkestra"
-    },
-    "image": {
-      "@type": "ImageObject",
-      "contentUrl": "https://ipfs.io/ipfs/QmceEkxiySH2DRCwsg8B9hfvTVLnpTzwe4GhTio98Vu5ir",
-      "sha256": "9ff5303b295b96c29ef732c08bceea90d07bb1e7c56e635603756f473fa4e29c"
     },
     "motivations": {
       "@value": "For governance on Cardano to have any chance of success, we will need a wide range of views and opinions. I intend to bring mine to the table and whoever likes my takes on things, is welcome to trust me with their delegation."
@@ -95,37 +67,37 @@
       "@value": "Bring well balanced opinions to a knife fight."
     },
     "paymentAddress": {
-      "@value": "addr1qyycz29n0t3s2cwaa54f5hhnsyqxv72hnkm7yq3k35hjjkau34ljkee7272kaw5nphrrcsxjcrm9hz97ggm47us6kp9q5ykye5"
+      "@value": "addr1qygxky328r77p53jqdnppn5mhe6a2rx4e7f2xxf99q9x0edz33x99896xw90qzcuk3h8ldptxfql7vh79eq4hrum5k3q4qljhd"
     },
     "qualifications": {
       "@value": "I am a political human being with a reasonable functional brain, a good technical understanding and a general interest in the human experience."
     },
     "references": [
       {
-        "@type": "Other",
+        "@type": "Link",
         "label": {
-          "@value": "twitter"
+          "@value": "X"
         },
         "uri": {
-          "@value": "https://x.com/madorkestra"
+          "@value": "https://x.com/MadOrkestra"
         }
       },
       {
-        "@type": "Other",
+        "@type": "Link",
         "label": {
-          "@value": "web"
+          "@value": "Web"
         },
         "uri": {
           "@value": "https://madorkestra.com"
         }
       },
       {
-        "@type": "Other",
+        "@type": "Identity",
         "label": {
-          "@value": "discord"
+          "@value": "X"
         },
         "uri": {
-          "@value": "@madorkestra"
+          "@value": "https://x.com/MadOrkestra"
         }
       }
     ]
