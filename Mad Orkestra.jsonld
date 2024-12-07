@@ -1,0 +1,105 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP119": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0119/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP119:body",
+      "@context": {
+        "references": {
+          "@id": "CIP119:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Identity": "CIP119:IdentityReference",
+            "Link": "CIP119:LinkReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "referenceHash": {
+              "@id": "CIP119:referenceHash",
+              "@context": {
+                "hashDigest": "CIP119:hashDigest",
+                "hashAlgorithm": "CIP100:hashAlgorithm"
+              }
+            }
+          }
+        },
+        "paymentAddress": "CIP119:paymentAddress",
+        "givenName": "CIP119:givenName",
+        "image": "CIP119:image",
+        "objectives": "CIP119:objectives",
+        "motivations": "CIP119:motivations",
+        "qualifications": "CIP119:qualifications",
+        "doNotList": "CIP119:doNotList"
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "authors": [],
+  "hashAlgorithm": {
+    "@value": "blake2b-256"
+  },
+  "body": {
+    "doNotList": false,
+    "givenName": {
+      "@value": "Mad Orkestra"
+    },
+    "motivations": {
+      "@value": "For governance on Cardano to have any chance of success, we will need a wide range of views and opinions. I intend to bring mine to the table and whoever likes my takes on things, is welcome to trust me with their delegation. I recommend following me on X for a while before delegating, you will get the picture."
+    },
+    "objectives": {
+      "@value": "Bring well balanced opinions to a knife fight."
+    },
+    "paymentAddress": {
+      "@value": "addr1qygxky328r77p53jqdnppn5mhe6a2rx4e7f2xxf99q9x0edz33x99896xw90qzcuk3h8ldptxfql7vh79eq4hrum5k3q4qljhd"
+    },
+    "qualifications": {
+      "@value": "I am a political human being with a reasonable functional brain, a good technical understanding and a general interest in the human experience."
+    },
+    "references": [
+      {
+        "@type": "Link",
+        "label": {
+          "@value": "X"
+        },
+        "uri": {
+          "@value": "https://x.com/MadOrkestra"
+        }
+      },
+      {
+        "@type": "Link",
+        "label": {
+          "@value": "Web"
+        },
+        "uri": {
+          "@value": "https://madorkestra.com"
+        }
+      },
+      {
+        "@type": "Identity",
+        "label": {
+          "@value": "X"
+        },
+        "uri": {
+          "@value": "https://x.com/MadOrkestra"
+        }
+      }
+    ]
+  }
+}
